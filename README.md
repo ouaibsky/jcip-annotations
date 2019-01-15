@@ -20,6 +20,8 @@ This is a cleanroom implementation of the [JCIP][1] Annotations.
 
 I used only the Javadoc of the [JCIP][1] annotations.
 
+This version is build with JDK 11 and declare a module name **org.icroco.jcip.annotation**
+
 At no time did I look at the original Findbugs source code.
 
 Rational
