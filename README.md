@@ -13,14 +13,16 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
+
+This version is built with JDK 11 and declare a module ([JIGSAW][2]) with name **org.icroco.jcip.annotation**
+* All annotations are exported and open.
+
 Introduction
 ------------
 
 This is a cleanroom implementation of the [JCIP][1] Annotations.
 
 I used only the Javadoc of the [JCIP][1] annotations.
-
-This version is build with JDK 11 and declare a module name **org.icroco.jcip.annotation**
 
 At no time did I look at the original Findbugs source code.
 
@@ -42,4 +44,5 @@ I saw the Yuk face listing on page 32, I *knew* I had to buy the book.
 
 If there is *one* book every Java developer should have, [JCIP][1] is **that** book.
 
-  [1]: http://jcip.net
+  [1]: http://jcip.net  
+  [2]: https://openjdk.java.net/projects/jigsaw/

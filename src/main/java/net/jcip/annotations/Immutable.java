@@ -34,9 +34,10 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * Performance optimization may mean that instances of an immutable class may have mutable internal state. The
  * critical point is that callers cannot tell the difference. For example {@link String} is an immutable class, despite
  * having an internal int that is non-final but used as a cache for {@link String#hashCode()}.
- * <p/>
+ * <br>
  * Immutable objects are inherently thread-safe; they may be passed between threads or published without
  * synchronization.
+ *
  */
 @Documented
 @Target(TYPE)
