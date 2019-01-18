@@ -29,14 +29,7 @@
         javadocs.
     </description>
     <url>https://github.com/ouaibsky/jcip-annotations</url>
-    <inceptionYear>2013</inceptionYear>
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+    <inceptionYear>2019</inceptionYear>
 
     <developers>
         <developer>
@@ -62,11 +55,30 @@
         <system>github</system>
         <url>https://github.com/ouaibsky/jcip-annotations/issues</url>
     </issueManagement>
+
+    <licenses>
+        <license>
+            <name>GNU General Public License version 3.0 (GPLv3)</name>
+            <url>http://www.opensource.org/licenses/gpl-3.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
     <distributionManagement>
+        <repository>
+            <id>ossrh</id>
+            <name>ICROCO Release Repository</name>
+            <url>http://oss.sonatype.org/content/repositories/icroco-releases/</url>
+        </repository>
         <snapshotRepository>
             <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <name>ICROCO Snapshot Repository</name>
+            <url>http://oss.sonatype.org/content/repositories/icroco-snapshots/</url>
         </snapshotRepository>
+        <!--<snapshotRepository>-->
+        <!--<id>ossrh</id>-->
+        <!--<url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+        <!--</snapshotRepository>-->
     </distributionManagement>
 
     <properties>
@@ -189,6 +201,21 @@
                         <id>attach-javadocs</id>
                         <goals>
                             <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <!--Think to define var: export GPG_TTY=$(tty)-->
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
                         </goals>
                     </execution>
                 </executions>
